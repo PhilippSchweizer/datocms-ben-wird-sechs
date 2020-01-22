@@ -15,7 +15,6 @@ const recipeQuery = gql`
         name
       }
       abstract
-      ingredients
       coverImage {
         responsiveImage(imgixParams: { fit: crop, w: 1000, h: 500 }) {
           srcSet
@@ -87,8 +86,7 @@ const Recipe = props => {
                   data={recipe.coverImage.responsiveImage}
                 />
                 <div className="Recipe-box">
-                  <h5 className="Recipe-box-title">Ingredients</h5>
-                  <Markdown source={recipe.ingredients} escapeHtml={false} />
+
                 </div>
                 {recipe.content.map((block, i) => {
                   if (block.__typename === "TextImageBlockRecord") {
