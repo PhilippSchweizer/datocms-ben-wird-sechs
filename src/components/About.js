@@ -34,9 +34,7 @@ const Authors = props => {
         if (error) return `ERROR: ${error}`;
         return (
           <section>
-            test
-          </section>
-          <section>
+            <div>test</div>
             <div>
               {data.authors.map(author => (
                 <div className="About-author" key={author.id}>
