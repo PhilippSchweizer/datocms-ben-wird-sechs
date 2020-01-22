@@ -5,7 +5,7 @@ import { Query } from "react-apollo";
 import qs from "qs";
 import { Image } from "react-datocms"
 
-const RECIPES_PER_PAGE = 2;
+const RECIPES_PER_PAGE = 20;
 const homeQuery = gql`
   query recipes($first: IntType!, $skip: IntType!) {
     meta: _allRecipesMeta {
@@ -79,7 +79,7 @@ const Home = props => {
                 className="Home-button"
                 to={`?skip=${skip + RECIPES_PER_PAGE}`}
               >
-                Show More Recipes
+                Mehr Stationen
               </Link>
             )}
           </section>
