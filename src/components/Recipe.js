@@ -92,7 +92,6 @@ const Recipe = props => {
                   if (block.__typename === "TextImageBlockRecord") {
                     return (
                       <div key={block.id} className="Recipe-flag">
-                        <div className="Recipe-flag-number">{i + 1}</div>
                         <Image
                           className="Recipe-flag-image"
                           data={block.image.responsiveImage}
@@ -106,7 +105,6 @@ const Recipe = props => {
                   } else if (block.__typename === "TextBlockRecord") {
                     return (
                       <div key={block.id} className="Recipe-flag">
-                        <div className="Recipe-flag-number">{i + 1}</div>
                         <Markdown
                           source={block.text}
                           className="Recipe-flag-text"
