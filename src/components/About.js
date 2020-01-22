@@ -35,7 +35,7 @@ const Authors = props => {
         return (
           <section>
             <h2>DAS Geschenk</h2>
-            <img src="https://www.datocms-assets.com/21273/1579705916-20191105080115.jpg" alt="Ben auf seinem Fahrrad" />
+            <div className="Custom-img-container"></div>
             <div>
               Ben braucht ein neues Fahrrad. Dafür sammeln wir Geld. Beteiligt euch per <a href="https://paypal.me/pools/c/8lSSrGQ6QB">PayPal</a> oder überweist es an DEN Papa (IBAN DE46 2004 1155 0682 3553 00).
             </div>
