@@ -16,6 +16,9 @@ a
 
 /* Breakpoints
 
+$screen-md-min: 768px
+$screen-md-max: 768px
+
 /* Custom About Section
 
 .Custom-img-container
@@ -84,17 +87,23 @@ a
 .Home-link
   text-decoration: none
   display: flex
-  flex-direction: column
+  @include breakpoint($screen-md-max) {
+    flex-direction: column
+  }
   color: #000
   align-items: center
-  // height: 180px
+  @include breakpoint($screen-md-min) {
+    height: 180px
+  }
 
 .Home-img
   display: block
   object-fit: cover
   height: 100%
   width: 100%
-  // margin-right: 30px
+  @include breakpoint($screen-md-min) {
+    margin-right: 30px
+  }
 
 .Home-button
   font-size: 16px
