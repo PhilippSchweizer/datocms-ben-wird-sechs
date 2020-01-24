@@ -14,10 +14,18 @@ a
   margin: 0 auto
   padding: 0 20px
 
+
 /* Breakpoints
 
 $screen-md-min: 768px
-$screen-md-max: 768px
+
+@mixin md-min
+  @media (min-width: $screen-md-min)
+    @content
+
+@mixin md-max
+  @media (max-width: $screen-md-min)
+    @content
 
 /* Custom About Section
 
@@ -87,11 +95,11 @@ $screen-md-max: 768px
 .Home-link
   text-decoration: none
   display: flex
-  @include breakpoint($screen-md-max)
+  @include md-max
     flex-direction: column
   color: #000
   align-items: center
-  @include breakpoint($screen-md-min)
+  @include md-min
     height: 180px
 
 .Home-img
@@ -99,7 +107,7 @@ $screen-md-max: 768px
   object-fit: cover
   height: 100%
   width: 100%
-  @include breakpoint($screen-md-min)
+  @include md-min
     margin-right: 30px
 
 .Home-button
