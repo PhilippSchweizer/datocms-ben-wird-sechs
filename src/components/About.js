@@ -56,6 +56,7 @@ const Authors = props => {
                   </div>
                   <Markdown
                     source={author.description}
+                    escapeHtml={false}
                   />
                 </div>
               ))}
