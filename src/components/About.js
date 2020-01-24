@@ -35,15 +35,6 @@ const Authors = props => {
         if (error) return `ERROR: ${error}`;
         return (
           <section>
-            <div className="About-author">
-              <div className="About-infoHeader">
-                <h2>DAS Geschenk</h2>
-                <div>
-                  Ben braucht ein neues Fahrrad. Dafür sammeln wir Geld. Beteiligt euch per <a href="https://paypal.me/pools/c/8lSSrGQ6QB">PayPal</a> oder überweist es an DEN Papa (IBAN DE46 2004 1155 0682 3553 00).
-                </div>
-                <div className="Custom-img-container"></div>
-              </div>
-            </div>
             <div>
               {data.authors.map(author => (
                 <div className="About-author" key={author.id}>
