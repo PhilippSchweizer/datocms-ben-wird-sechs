@@ -168,6 +168,8 @@ $screen-md-min: 768px
 
 .Recipe-flag-image
   width: 100%
+  @include md-min
+    width: 50%
 
 .Recipe-cover, .Recipe-flag-image
   border-top: 4px solid #000
@@ -189,8 +191,10 @@ $screen-md-min: 768px
   text-transform: uppercase
 
 .Recipe-flag-text
-  // padding: 10px
-  max-width: 100%
+  width: 100%
+  @include md-min
+    max-width: 50%
+    padding: 10px
 
 .Recipe-flag-number
   font-weight: bold
