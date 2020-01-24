@@ -35,7 +35,7 @@ const recipeQuery = gql`
           id
           __typename
           image {
-            responsiveImage(imgixParams: { fit: crop, w: 300, h: 300 }) {
+            responsiveImage(imgixParams: { fit: crop, ar: "16:9", w: 1000 }) {
               srcSet
               webpSrcSet
               sizes
@@ -73,21 +73,19 @@ const Recipe = props => {
             {recipe && (
               <article>
                 <h1 className="Recipe-title">{recipe.title}</h1>
-                <strong>
+{/*                 <strong>
                   By <Link to={"/about"}>{recipe.author.name}</Link>
-                </strong>
+                </strong> */}
+                  <Image
+                    className="Recipe-cover"
+                    data={recipe.coverImage.responsiveImage}
+                  />
                 <Markdown
                   source={recipe.abstract}
                   escapeHtml={false}
                   className="Recipe-abstract"
                 />
-                <Image
-                  className="Recipe-cover"
-                  data={recipe.coverImage.responsiveImage}
-                />
-                <div className="Recipe-box">
 
-                </div>
                 {recipe.content.map((block, i) => {
                   if (block.__typename === "TextImageBlockRecord") {
                     return (
