@@ -1,4 +1,5 @@
 import React from "react";
+import Markdown from "react-markdown";
 import gql from "graphql-tag";
 import { Query } from "react-apollo";
 import { Image } from "react-datocms"
@@ -53,7 +54,9 @@ const Authors = props => {
                     />
                     <h2>{author.name}</h2>
                   </div>
-                  <p>{author.description}</p>
+                  <Markdown
+                    source={author.description}
+                  />
                 </div>
               ))}
             </div>
