@@ -87,23 +87,20 @@ $screen-md-max: 768px
 .Home-link
   text-decoration: none
   display: flex
-  @include breakpoint($screen-md-max) {
+  @include breakpoint($screen-md-max)
     flex-direction: column
-  }
   color: #000
   align-items: center
-  @include breakpoint($screen-md-min) {
+  @include breakpoint($screen-md-min)
     height: 180px
-  }
 
 .Home-img
   display: block
   object-fit: cover
   height: 100%
   width: 100%
-  @include breakpoint($screen-md-min) {
+  @include breakpoint($screen-md-min)
     margin-right: 30px
-  }
 
 .Home-button
   font-size: 16px
