@@ -17,7 +17,7 @@ const homeQuery = gql`
       slug
       abstract
       coverImage {
-        responsiveImage(imgixParams: { fit: facearea, ar: "16:9", w: 500 }) {
+        responsiveImage(imgixParams: { fit: facearea, w: 500, h: 300 }) {
           aspectRatio
           width
           sizes
