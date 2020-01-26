@@ -3,7 +3,7 @@ import { NavLink } from "react-router-dom";
 
 export default () => (
   <header className="Header-header">
-    <h1 className="Header-h1">Ben wird sechs</h1>
+    <h1 className="Header-h1">Ben <s>wird</s> ist sechs</h1>
     <nav className="Header-nav">
       <NavLink
         exact
